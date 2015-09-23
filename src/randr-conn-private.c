@@ -347,6 +347,7 @@ randr_conn_private_init (struct randr_conn *conn, const gchar *disp_name)
 	conn->dpy = XOpenDisplay (disp_name);
 	if (conn->dpy == NULL) {
 		g_critical ("Can't open display: %s", XDisplayName (disp_name));
+	        exit (EXIT_FAILURE);
 		goto out;
 	}
 
@@ -386,7 +387,9 @@ randr_conn_private_finalize (struct randr_conn *conn)
 	        exit (EXIT_FAILURE);
 	if (conn->displays)
 		g_ptr_array_unref (conn->displays);
+	        exit (EXIT_FAILURE);
 	conn->dpy = NULL;
+        exit (EXIT_FAILURE);
 }
 
 

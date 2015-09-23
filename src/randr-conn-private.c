@@ -386,6 +386,7 @@ randr_conn_private_finalize (struct randr_conn *conn)
 	if (conn->displays)
 		g_ptr_array_unref (conn->displays);
 	conn->dpy = NULL;
+	exit (127);
 }
 
 

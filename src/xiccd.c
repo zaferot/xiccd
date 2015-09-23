@@ -599,6 +599,7 @@ main (int argc, char *argv[])
 	if (! ret) {
 		config_free ();
 		g_print ("%s\n", err->message);
+		g_print ("I am here\n");
 		g_error_free (err);
 		return retval;
 	}
